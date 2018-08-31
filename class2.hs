@@ -23,3 +23,22 @@ esPar x | mod x 2 == 0 = True
 esMultiploDe :: Integer -> Integer -> Bool
 esMultiploDe x y | mod x y == 0 = True
 				 | otherwise = False
+
+
+crearPar :: a -> b -> (a, b)
+crearPar x y = (x, y)
+
+invertir :: (a, b) -> (b, a)
+invertir p = (snd p , fst p)
+
+normaVectorial  :: (Float , Float) -> Float
+normaVectorial p = sqrt ((fst p) ^ 2 + (snd p) ^ 2)
+
+distanciaPuntos :: (Float, Float) -> (Float, Float) -> Float
+distanciaPuntos a b = sqrt( ( (fst a) - (fst b) )^2 + ((snd a) - (snd b))^2 )
+
+restaPuntos :: (Float, Float) -> (Float,Float) -> (Float, Float) 
+restaPuntos a b = ( fst a - fst b , snd a - snd b )
+
+distanciaPuntos2 :: (Float, Float) -> (Float, Float) -> Float
+distanciaPuntos2 a b = normaVectorial(restaPuntos a b) 
