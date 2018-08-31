@@ -15,3 +15,11 @@ maximo a b | a < b = b
 		   | otherwise = a
 
 maximo3 a b c = maximo(maximo a b) c
+
+esPar :: Integer -> Bool
+esPar x | mod x 2 == 0 = True
+		| otherwise = False
+
+esMultiploDe :: Integer -> Integer -> Bool
+esMultiploDe x y | mod x y == 0 = True
+				 | otherwise = False
